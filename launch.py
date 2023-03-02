@@ -307,7 +307,7 @@ def prepare_environment():
         run_pip(f"install -r {os.path.join(repo_dir('CodeFormer'), 'requirements.txt')}", "requirements for CodeFormer")
 
     run_pip(f"install -r {requirements_file}", "requirements for Web UI")
-
+    print("Running extensions installers")
     run_extensions_installers(settings_file=args.ui_settings_file)
 
     if update_check:
